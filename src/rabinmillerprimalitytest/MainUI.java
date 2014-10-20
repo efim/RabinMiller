@@ -97,10 +97,12 @@ public class MainUI extends javax.swing.JFrame {
 		double accuracy = Double.parseDouble(accuracyTextField.getText());
 		boolean inputIsPrime = test.isPrime(number, accuracy);
 		
+		resultLabel.setText("Number " + inputTextField.getText() + " is ");
+		
 		if (inputIsPrime) {
-			resultLabel.setText("Probably Prime");
+			resultLabel.setText(resultLabel.getText() + "Probably Prime");
 		} else {
-			resultLabel.setText("Composite");
+			resultLabel.setText(resultLabel.getText() + "Composite");
 		}
 		
     }//GEN-LAST:event_checkButtonActionPerformed
