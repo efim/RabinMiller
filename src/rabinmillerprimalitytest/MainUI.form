@@ -24,12 +24,15 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="resultLabel" max="32767" attributes="0"/>
+                  <Component id="resultLabel" min="-2" pref="205" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Component id="inputTextField" min="-2" pref="94" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="inputTextField" min="-2" pref="94" max="-2" attributes="0"/>
+                          <Component id="accuracyTextField" max="32767" attributes="0"/>
+                      </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="checkButton" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -42,13 +45,17 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="inputTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="checkButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="inputTextField" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="accuracyTextField" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="checkButton" min="-2" pref="49" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="resultLabel" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="36" max="32767" attributes="0"/>
+              <EmptySpace pref="15" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -66,6 +73,11 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="inputTextFieldActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="accuracyTextField">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Accuracy"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="resultLabel">
       <Properties>
