@@ -37,6 +37,20 @@ public class PrimalityTest {
 	 * @return false - if number is composite, true - if probably prime
 	 */
 	public boolean RabinMillerPrimalityTest(int number, double accuracy){
+		int baseCap = number - 1;
+		int evennessPower = 0;
+		
+		while (baseCap % 2 == 0) {
+			evennessPower++;
+			baseCap /= 2;
+		}
+		
+		
+		
 		return false;
+	}
+	
+	private int powerInModule(int base, int power, int module) {
+		return 0;
 	}
 }
