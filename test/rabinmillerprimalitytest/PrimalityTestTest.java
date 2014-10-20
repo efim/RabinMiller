@@ -124,5 +124,40 @@ public class PrimalityTestTest {
 		assertEquals(expResult, result);
 	
 	}
+
+	/**
+	 * Test of testCountFromAccuracy method, of class PrimalityTest.
+	 */
+	@Test
+	public void testTestCountFromAccuracy() {
+		System.out.println("testCountFromAccuracy");
+		double accuracy = 0.2;
+		PrimalityTest instance = new PrimalityTest();
+		int expResult = 2;
+		int result = instance.testCountFromAccuracy(accuracy);
+		assertEquals(expResult, result);
+		
+		accuracy = 0.01;
+		expResult = 4;
+		result = instance.testCountFromAccuracy(accuracy);
+		assertEquals(expResult, result);
+		
+	}
+
+	/**
+	 * Test of getRandomBase method, of class PrimalityTest.
+	 */
+	@Test
+	public void testGetRandomBase() {
+		System.out.println("getRandomBase");
+		int number;
+		number = (int) Math.floor(3 + 100 * Math.random());
+		PrimalityTest instance = new PrimalityTest();
+		
+		for (int i = 0; i < 100; i++) {
+			int result = instance.getRandomBase(number);
+			assertTrue(result >= 2 && result <= number - 1);
+		}
+	}
 	
 }
