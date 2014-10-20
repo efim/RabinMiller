@@ -53,7 +53,7 @@ public class PrimalityTest {
 		
 		WitnessLoop:
 		for (int i = 0; i < testCount; i++) {
-			int base = (int) Math.floor(Math.random() * (number - 2) + 1);
+			int base = getRandomBase(number);
 			
 			int x = powerInModule(base, baseCap, number);
 			if (x == 1 || x == number - 1) {
@@ -77,8 +77,13 @@ public class PrimalityTest {
 		return true;
 	}
 	
-	private int testCountFromAccuracy(double accuracy) {
-		int count = 1;
+	protected int getRandomBase(int number) {
+		return (int) Math.floor(Math.random() * (number - 3) + 2);
+
+	}
+	
+	protected int testCountFromAccuracy(double accuracy) {
+		int count = 0;
 		double acc = accuracy;
 		while (acc < 1) {
 			acc *= 4;
