@@ -80,5 +80,35 @@ public class PrimalityTestTest {
 		// TODO review the generated test code and remove the default call to fail.
 		fail("The test case is a prototype.");
 	}
+
+	/**
+	 * Test of powerInModule method, of class PrimalityTest.
+	 */
+	@Test
+	public void testPowerInModule() {
+		System.out.println("powerInModule");
+		int base = 3;
+		int power = 5;
+		int module = 10000;
+		PrimalityTest instance = new PrimalityTest();
+		int expResult = 243;
+		int result = instance.powerInModule(base, power, module);
+		assertEquals(expResult, result);
+
+		base = 3;
+		power = 5;
+		module = 102;
+		expResult = 39;
+		result = instance.powerInModule(base, power, module);
+		assertEquals(expResult, result);
+		
+		base = 5;
+		power = 17;
+		module = 102;
+		expResult = 5;
+		result = instance.powerInModule(base, power, module);
+		assertEquals(expResult, result);
+	
+	}
 	
 }
