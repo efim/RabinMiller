@@ -20,4 +20,17 @@ public class PrimalityTest {
 		ui.setVisible(true);
 	}
 	
+	public boolean isPrime(int number) {
+		if (number < 2) {
+			return false;
+		}
+		if (number % 2 == 0) {
+			return false;
+		}
+		return RabinMillerPrimalityTest();
+	}
+	
+	public boolean RabinMillerPrimalityTest(){
+		return false;
+	}
 }
