@@ -61,8 +61,8 @@ public class PrimalityTest {
 			}
 			
 			for (int j = 0; j < evennessPower; j++) {
-				x *= x;
-				x = x % number;
+				x = multiplicationInModule(x, x, number);
+				
 				if (x == 1) {
 					return false;
 				}
@@ -100,14 +100,14 @@ public class PrimalityTest {
 		
 		while (power != 0) {
 			if (power % 2 == 1) {
-				result *= multiplicant;
-				result = result % module;
+				result = multiplicationInModule(result, multiplicant, module);
+				
 				power--;
 			}
 			
 			power = power >> 1;
-			multiplicant *= multiplicant;
-			multiplicant = multiplicant % module;
+			
+			multiplicant = multiplicationInModule(multiplicant, multiplicant, module);
 			
 		}
 		
