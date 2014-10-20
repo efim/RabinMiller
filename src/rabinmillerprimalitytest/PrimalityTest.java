@@ -61,7 +61,8 @@ public class PrimalityTest {
 			}
 			
 			for (int j = 0; j < evennessPower; j++) {
-				x *= x % number;
+				x *= x;
+				x = x % number;
 				if (x == 1) {
 					return false;
 				}
