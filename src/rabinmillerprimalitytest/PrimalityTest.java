@@ -113,4 +113,24 @@ public class PrimalityTest {
 		
 		return result;
 	}
+	
+	protected int multiplicationInModule(int left, int right, int module) {
+		int sum = left;
+		int result = 0;
+		int multiplier = right;
+		
+		while (multiplier != 0) {
+			if (multiplier % 2 == 1) {
+				result += sum;
+				result = result % module;
+				multiplier--;
+			}
+			
+			multiplier = multiplier >> 1;
+			sum *= 2;
+			sum = sum % module;
+		}
+		
+		return result;
+	}
 }
