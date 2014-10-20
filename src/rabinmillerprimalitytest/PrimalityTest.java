@@ -45,12 +45,46 @@ public class PrimalityTest {
 			baseCap /= 2;
 		}
 		
+		int testCount = testCountFromAccuracy(accuracy);
 		
+		WitnessLoop:
+		for (int i = 0; i < testCount; i++) {
+			int base = (int) Math.floor(Math.random() * (number - 2) + 1);
+			
+			int x = powerInModule(base, baseCap, number);
+			if (x == 1 || x == number - 1) {
+				continue;
+			}
+			
+			for (int j = 0; j < evennessPower; j++) {
+				x *= x % number;
+				if (x == 1) {
+					return false;
+				}
+				if (x == number - 1) {
+					continue WitnessLoop;
+				}
+			}
+			
+			return false;
+			
+		}
 		
-		return false;
+		return true;
 	}
 	
-	private int powerInModule(int base, int power, int module) {
+	private int testCountFromAccuracy(double accuracy) {
+		int count = 1;
+		double acc = accuracy;
+		while (acc < 1) {
+			acc *= 4;
+			count++;
+		}
+		
+		return count;
+	}
+	
+	protected int powerInModule(int base, int power, int module) {
 		int result = 1;
 		int multiplicant = base;
 		
