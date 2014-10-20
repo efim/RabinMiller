@@ -51,6 +51,22 @@ public class PrimalityTest {
 	}
 	
 	private int powerInModule(int base, int power, int module) {
-		return 0;
+		int result = 1;
+		int multiplicant = base;
+		
+		while (power != 0) {
+			if (power % 2 == 1) {
+				result *= multiplicant;
+				result = result % module;
+				power--;
+			}
+			
+			power = power >> 1;
+			multiplicant *= multiplicant;
+			multiplicant = multiplicant % module;
+			
+		}
+		
+		return result;
 	}
 }
