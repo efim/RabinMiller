@@ -162,5 +162,35 @@ public class PrimalityTestTest {
 		// TODO review the generated test code and remove the default call to fail.
 		fail("The test case is a prototype.");
 	}
+
+	/**
+	 * Test of multiplicationInModule method, of class PrimalityTest.
+	 */
+	@Test
+	public void testMultiplicationInModule() {
+		System.out.println("multiplicationInModule");
+		int left = 14;
+		int right = 13;
+		int module = 10000;
+		PrimalityTest instance = new PrimalityTest();
+		int expResult = 14*13;
+		int result = instance.multiplicationInModule(left, right, module);
+		assertEquals(expResult, result);
+
+		left = 28;
+		right = 0;
+		module = 10000;
+		expResult = 0;
+		result = instance.multiplicationInModule(left, right, module);
+		assertEquals(expResult, result);
+		
+		left = 67;
+		right = 88;
+		module = 23;
+		expResult = 8;
+		result = instance.multiplicationInModule(left, right, module);
+		assertEquals(expResult, result);
+
+	}
 	
 }
