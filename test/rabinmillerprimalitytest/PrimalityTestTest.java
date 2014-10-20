@@ -191,6 +191,19 @@ public class PrimalityTestTest {
 		result = instance.multiplicationInModule(left, right, module);
 		assertEquals(expResult, result);
 
+		left = 46099;
+		right = 46099;
+		module = 214;
+		expResult = 3;
+		result = instance.multiplicationInModule(left, right, module);
+		assertEquals(expResult, result);
+		
+		left = 53327;
+		right = 53327;
+		module = 214;
+		expResult = 183;
+		result = instance.multiplicationInModule(left, right, module);
+		assertEquals(expResult, result);
 	}
 	
 }
