@@ -55,14 +55,30 @@ public class PrimalityTestTest {
 	@Test
 	public void testIsPrime() {
 		System.out.println("isPrime");
-		int number = 0;
-		double accuracy = 0.0;
+		int number = 200;
+		double accuracy = 0.001;
 		PrimalityTest instance = new PrimalityTest();
 		boolean expResult = false;
 		boolean result = instance.isPrime(number, accuracy);
 		assertEquals(expResult, result);
-		// TODO review the generated test code and remove the default call to fail.
-		fail("The test case is a prototype.");
+		
+		number = 189;
+		accuracy = 0.01;
+		expResult = false;
+		result = instance.isPrime(number, accuracy);
+		assertEquals(expResult, result);
+		
+		number = 416;
+		accuracy = 0.01;
+		expResult = false;
+		result = instance.isPrime(number, accuracy);
+		assertEquals(expResult, result);	
+		
+		number = 2;
+		accuracy = 0.01;
+		expResult = true;
+		result = instance.isPrime(number, accuracy);
+		assertEquals(expResult, result);
 	}
 
 	/**
@@ -71,14 +87,12 @@ public class PrimalityTestTest {
 	@Test
 	public void testRabinMillerPrimalityTest() {
 		System.out.println("RabinMillerPrimalityTest");
-		int number = 0;
-		double accuracy = 0.0;
-		PrimalityTest instance = new PrimalityTest();
-		boolean expResult = false;
-		boolean result = instance.RabinMillerPrimalityTest(number, accuracy);
-		assertEquals(expResult, result);
-		// TODO review the generated test code and remove the default call to fail.
+		
+
+	// TODO review the generated test code and remove the default call to fail.
 		fail("The test case is a prototype.");
+
+		
 	}
 
 	/**
