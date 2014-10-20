@@ -93,7 +93,16 @@ public class MainUI extends javax.swing.JFrame {
     }//GEN-LAST:event_inputTextFieldActionPerformed
 
     private void checkButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkButtonActionPerformed
-        // TODO add your handling code here:
+        int number = Integer.parseInt(inputTextField.getText());
+		double accuracy = Double.parseDouble(accuracyTextField.getText());
+		boolean inputIsPrime = test.isPrime(number, accuracy);
+		
+		if (inputIsPrime) {
+			resultLabel.setText("Probably Prime");
+		} else {
+			resultLabel.setText("Composite");
+		}
+		
     }//GEN-LAST:event_checkButtonActionPerformed
 
 
