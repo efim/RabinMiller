@@ -81,19 +81,6 @@ public class PrimalityTestTest {
 		assertEquals(expResult, result);
 	}
 
-	/**
-	 * Test of RabinMillerPrimalityTest method, of class PrimalityTest.
-	 */
-	@Test
-	public void testRabinMillerPrimalityTest() {
-		System.out.println("RabinMillerPrimalityTest");
-		
-
-	// TODO review the generated test code and remove the default call to fail.
-		fail("The test case is a prototype.");
-
-		
-	}
 
 	/**
 	 * Test of powerInModule method, of class PrimalityTest.
@@ -158,6 +145,22 @@ public class PrimalityTestTest {
 			int result = instance.getRandomBase(number);
 			assertTrue(result >= 2 && result <= number - 1);
 		}
+	}
+
+	/**
+	 * Test of RabinMillerPrimalityTest method, of class PrimalityTest.
+	 */
+	@Test
+	public void testRabinMillerPrimalityTest() {
+		System.out.println("RabinMillerPrimalityTest");
+		int number = 101;
+		double accuracy = 0.0001;
+		PrimalityTest instance = new PrimalityTest();
+		boolean expResult = true;
+		boolean result = instance.RabinMillerPrimalityTest(number, accuracy);
+		assertEquals(expResult, result);
+		// TODO review the generated test code and remove the default call to fail.
+		fail("The test case is a prototype.");
 	}
 	
 }
