@@ -16,6 +16,8 @@ public class PrimalityTest {
 	 */
 	public static void main(String[] args) {
 		// TODO code application logic here
+		MainUI ui = new MainUI();
+		ui.setVisible(true);
 	}
 	
 }
