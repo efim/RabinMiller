@@ -21,8 +21,11 @@ public class PrimalityTest {
 	}
 	
 	public boolean isPrime(int number, double accuracy) {
-		if (number < 2) {
+		if (number < 0) {
 			return false;
+		}
+		if (number == 1 || number == 2) {
+			return true;
 		}
 		if (number % 2 == 0) {
 			return false;
