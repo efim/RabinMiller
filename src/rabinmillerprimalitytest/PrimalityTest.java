@@ -20,17 +20,23 @@ public class PrimalityTest {
 		ui.setVisible(true);
 	}
 	
-	public boolean isPrime(int number) {
+	public boolean isPrime(int number, double accuracy) {
 		if (number < 2) {
 			return false;
 		}
 		if (number % 2 == 0) {
 			return false;
 		}
-		return RabinMillerPrimalityTest();
+		return RabinMillerPrimalityTest(number, accuracy);
 	}
 	
-	public boolean RabinMillerPrimalityTest(){
+	/**
+	 *
+	 * @param number - number to be tested for primality
+	 * @param accuracy - needed chance of misidentifying as prime
+	 * @return false - if number is composite, true - if probably prime
+	 */
+	public boolean RabinMillerPrimalityTest(int number, double accuracy){
 		return false;
 	}
 }
